@@ -24,3 +24,42 @@ body {
   border: 1px solid whitesmoke;
   box-shadow: 0 0 0 1px rgba(245, 245, 245, 0.943);
 }
+
+/* home */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4rem;
+  margin: 20px;
+}
+/* Search */
+.search {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  box-shadow: 3px 4px 2px whitesmoke;
+  padding: 8px 8px 8px 6px;
+  overflow: hidden;
+}
+.search input {
+  position: absolute;
+  left: 150px;
+  border: none;
+  outline: none;
+}
+.search i {
+  position: relative;
+  left: 16px;
+  overflow: hidden;
+}
+
+/*Region  */
+.Region {
+  padding: 2px;
+  box-shadow: 4px 5px 4px whitesmoke;
+}
+.Region select {
+  outline: none;
+  border: none;
+}

@@ -4,7 +4,7 @@ function Header() {
   return (
     <div className="header">
       <h2>Where is the world?</h2>
-      <i class="bx bx-moon"> Dark Mode</i>
+      <i className="bx bx-moon"> Dark Mode</i>
     </div>
   );
 }
