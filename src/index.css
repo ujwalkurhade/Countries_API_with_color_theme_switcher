@@ -56,10 +56,64 @@ body {
 
 /*Region  */
 .Region {
-  padding: 2px;
+  padding: 4px;
   box-shadow: 4px 5px 4px whitesmoke;
 }
 .Region select {
   outline: none;
   border: none;
+}
+.country {
+  width: 200px;
+  background: whitesmoke;
+  border-radius: 6px;
+  margin: 5px;
+  box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.56);
+  overflow: hidden;
+}
+.country img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+.countryData {
+  padding: 5px 10px;
+}
+.countryData h3 {
+  margin: 10px 0;
+}
+.countryList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .countryList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .countryList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    max-width: 720px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .countryList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    max-width: 550px;
+  }
 }

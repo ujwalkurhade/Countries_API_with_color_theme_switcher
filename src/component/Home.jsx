@@ -1,8 +1,9 @@
-import React from "react";
-import Countrys from "./Countrys";
+import React, { useState } from "react";
+import CountryList from "./CountryList";
 import Header from "./Header";
 
 function Home() {
+  const [value, setValue] = useState("");
   return (
     <div>
       {/* header */}
@@ -10,7 +11,11 @@ function Home() {
       {/* search */}
       <div className="filter">
         <div className="search">
-          <input placeholder="Search for a country..." />
+          <input
+            placeholder="Search for a country..."
+            value={value}
+            setValue={(e) => e.target.value}
+          />
           <i className="bx bx-search "></i>
         </div>
         {/* dropdown button */}
@@ -26,7 +31,7 @@ function Home() {
       </div>
 
       {/* Countrys */}
-      <Countrys />
+      <CountryList />
     </div>
   );
 }
