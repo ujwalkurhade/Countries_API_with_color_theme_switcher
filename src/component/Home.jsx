@@ -10,6 +10,7 @@ function Home() {
   // axios
   //   .get("https://jsonblob.com/api/1119106135625056256")
   //   .then((res) => setFilterData(res.data));
+  // console.log(country);
 
   useEffect(() => {
     axios
