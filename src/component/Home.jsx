@@ -5,18 +5,23 @@ import axios from "axios";
 
 function Home() {
   const [value, setValue] = useState("");
+  const [country, setcountry] = useState([]);
   const [filterData, setFilterData] = useState([]);
+  // axios
+  //   .get("https://jsonblob.com/api/1119106135625056256")
+  //   .then((res) => setFilterData(res.data));
 
   useEffect(() => {
     axios
       .get("https://jsonblob.com/api/1119106135625056256")
-      .then((res) => setFilterData(res.data));
+      .then((res) => setcountry(res.data));
+    setFilterData(country);
   }, []);
 
   const handelChange = (e) => {
     setValue(e.target.value);
     setFilterData(
-      filterData.filter(
+      country.filter(
         (data) =>
           data.name
             .toLowerCase()
@@ -24,8 +29,9 @@ function Home() {
           data.region
             .toLowerCase()
             .includes(value.toLowerCase())
-      )
+      ) || country
     );
+
     console.log(filterData);
   };
 
@@ -39,7 +45,6 @@ function Home() {
           <input
             placeholder="Search for a country..."
             value={value}
-            on
             onChange={handelChange}
           />
           <i className="bx bx-search "></i>
@@ -57,7 +62,7 @@ function Home() {
       </div>
 
       {/* Countrys */}
-      {<CountryList filterData={filterData} />}
+      <CountryList filterData={filterData} />
     </div>
   );
 }
