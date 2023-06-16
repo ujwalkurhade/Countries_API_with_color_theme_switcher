@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Card from "./Card";
 
-function CountryList({ filterData, country }) {
+function CountryList({ filterData }) {
   return (
     <div className="container">
       <h1>CountryList</h1>
