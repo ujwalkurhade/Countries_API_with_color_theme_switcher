@@ -7,16 +7,14 @@ function Home() {
   const [value, setValue] = useState("");
   const [country, setcountry] = useState([]);
   const [filterData, setFilterData] = useState([]);
-  // axios
-  //   .get("https://jsonblob.com/api/1119106135625056256")
-  //   .then((res) => setFilterData(res.data));
-  // console.log(country);
 
   useEffect(() => {
     axios
       .get("https://jsonblob.com/api/1119106135625056256")
       .then((res) => setcountry(res.data));
+
     setFilterData(country);
+    console.log(filterData);
   }, []);
 
   const handelChange = (e) => {
